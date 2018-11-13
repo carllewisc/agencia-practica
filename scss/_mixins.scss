@@ -1,0 +1,40 @@
+@mixin box-sizing($box-model) {
+	box-sizing: $box-model;
+}
+
+@mixin background-imagen($imagen) {
+	background-image: url($imagen);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+@mixin titulo-secciones() {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: $titulo;
+}
+
+/* Media Queries */
+@mixin telefono {
+	@media only screen and (min-width: #{$telefono}) {
+		@content;
+	}
+}
+
+@mixin tabletMin {
+	@media only screen and (min-width: #{$tablet}) {
+		@content;
+	}
+}
+
+@mixin tabletMax {
+	@media only screen and (min-width: #{$tablet}) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media only screen and (min-width: #{$desktop}) {
+		@content;
+	}
+}
